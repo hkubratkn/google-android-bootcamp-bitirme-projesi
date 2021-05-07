@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.HarcamaEkleFragment">
+
+
+    <EditText
+        android:id="@+id/editTextYazisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Açıklama"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Harcama"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextYazisi" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupKategori"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber">
+
+        <RadioButton
+            android:id="@+id/radioButtonFatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:text="Fatura" />
+
+        <RadioButton
+            android:id="@+id/radioButtonKira"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kira" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDiger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diğer" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupCins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupKategori">
+
+        <RadioButton
+            android:id="@+id/radioButtonTl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TL" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDolar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DOLAR" />
+
+        <RadioButton
+            android:id="@+id/radioButtonEuro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EURO" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSterlin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="STERLİN" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonHarcamaEkle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="EKLE"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroupCins"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupCins" />
+</androidx.constraintlayout.widget.ConstraintLayout>

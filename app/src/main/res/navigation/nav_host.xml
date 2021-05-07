@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.kapirti.bitirmeprojesi_googlebootcamp.View.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.kapirti.bitirmeprojesi_googlebootcamp.View.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_onBoardingTwoFragment"
+            app:destination="@id/onBoardingTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingTwoFragment"
+        android:name="com.kapirti.bitirmeprojesi_googlebootcamp.View.OnBoardingTwoFragment"
+        android:label="fragment_on_boarding_two"
+        tools:layout="@layout/fragment_on_boarding_two" >
+        <action
+            android:id="@+id/action_onBoardingTwoFragment_to_onBoasrdingThreeFragment"
+            app:destination="@id/onBoasrdingThreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoasrdingThreeFragment"
+        android:name="com.kapirti.bitirmeprojesi_googlebootcamp.View.OnBoasrdingThreeFragment"
+        android:label="fragment_on_boasrding_three"
+        tools:layout="@layout/fragment_on_boasrding_three" >
+        <action
+            android:id="@+id/action_onBoasrdingThreeFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.kapirti.bitirmeprojesi_googlebootcamp.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_harcamaEkleFragment"
+            app:destination="@id/harcamaEkleFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_isimDegistirFragment"
+            app:destination="@id/isimDegistirFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_harcamaDetayiFragment"
+            app:destination="@id/harcamaDetayiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/harcamaEkleFragment"
+        android:name="com.kapirti.bitirmeprojesi_googlebootcamp.View.HarcamaEkleFragment"
+        android:label="fragment_harcama_ekle"
+        tools:layout="@layout/fragment_harcama_ekle" >
+        <action
+            android:id="@+id/action_harcamaEkleFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/isimDegistirFragment"
+        android:name="com.kapirti.bitirmeprojesi_googlebootcamp.View.IsimDegistirFragment"
+        android:label="fragment_isim_degistir"
+        tools:layout="@layout/fragment_isim_degistir" >
+        <action
+            android:id="@+id/action_isimDegistirFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/harcamaDetayiFragment"
+        android:name="com.kapirti.bitirmeprojesi_googlebootcamp.View.HarcamaDetayiFragment"
+        android:label="fragment_harcama_detayi"
+        tools:layout="@layout/fragment_harcama_detayi" >
+        <action
+            android:id="@+id/action_harcamaDetayiFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>
